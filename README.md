@@ -43,6 +43,7 @@ Hier een korte uitleg over de waardes:
 
 Bovenstaande instelling resulteren in het onderstaande:
 
+<img src="/meetjestad-tilburg-weeradvies-voorbeeld.png" width="200">
 ![Voorbeeld Meet je Stad weeradvies website](/meetjestad-tilburg-weeradvies-voorbeeld.png)
 
 
