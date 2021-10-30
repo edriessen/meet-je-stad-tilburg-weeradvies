@@ -39,12 +39,9 @@ Hier een korte uitleg over de waardes:
 - **lowerTxt**: de tekst die je wil zien als de temperatuur onder de grenswaarde zal blijven.
 - **sensor**: het identificatienummer (ID) van het Meet je Stad meetstation die je wil uitlezen.
 
-Bovenstaande instelling resulteren in het onderstaande:
+De website vult de informatie uit de instellingen (name, advice, theme, tempLimit en ...Txt) automatisch op de juiste plek in.Bovenstaande instelling resulteren in het onderstaande:
 
 <img alt="Voorbeeld Meet je Stad weeradvies website" src="/meetjestad-tilburg-weeradvies-voorbeeld.png" width="300">
-
-De website vult de informatie uit de instellingen (name, advice, theme, tempLimit en ...Txt) automatisch op de juiste plek in.
-
 
 ## Uitdagingen
 Het weer voorspellen is een ingewikkeld iets. Bij de ontwikkeling van dit project is ervoor gekozen om met één type data (temperatuur) te werken. Dit heeft als doel de variatie in type data tijdens de workshop te minimaliseren tot één. Het project geeft een indicatie voor een weerdadvies af, maar het is niet bedoeld als accuraat middel om voorspelling op te baseren.
