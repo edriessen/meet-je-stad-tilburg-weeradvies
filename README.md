@@ -7,7 +7,11 @@ Template voor een simpele website die real-time de temperatuur ophaalt van een v
 Dit project is onderdeel van een Meet je Stad workshop over data analyse. De workshop geeft een introductie in data analyse o.b.v. de (open) temperatuur data van Meet je Stad. Het doel van de workshop is mensen te laten zien wat er mogelijk is met data analyse. 
 
 ## Data & technologie
-Het project maakt gebruik van de open data van Meet je Stad. De data worden op twee manieren gebruikt. Ten eerste bevat het project een bestand (`data.js`) met daarin informatie over de schommeling van temperaturen in een bepaalde periode van het jaar. Daarnaast haalt de website real-time de laatste meting van een sensor op. 
+Het project maakt gebruik van de open data van Meet je Stad. De data worden op twee manieren gebruikt. 
+
+1. Ten eerste bevat het project een bestand (`data.js`) met daarin informatie over de schommeling van temperaturen in een bepaalde periode van het jaar. 
+2. Daarnaast haalt de website real-time de laatste meting van een sensor op. 
+
 De website is gebouwd met HTML, CSS en Javascript. 
 
 ## Hoe te gebruiken
