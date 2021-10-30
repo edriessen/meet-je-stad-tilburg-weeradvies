@@ -1,7 +1,7 @@
 # Meet je Stad – Tilburg – Persoonlijk weeradvies
 
 ## Samenvatting
-Template voor een simpele website die real-time de temperatuur ophaalt van een van de Meet je Stad meetstation en op basis daarvan een voorspelling afgeeft. Hieronder een paar voorbeelden:
+Template voor een simpele website die real-time de temperatuur ophaalt van een van de Meet je Stad meetstation en op basis daarvan een voorspelling afgeeft.
 
 // voorbeeld nog toe te voegen
 
