@@ -3,8 +3,6 @@
 ## Samenvatting
 Template voor een simpele website die real-time de temperatuur ophaalt van een van de Meet je Stad meetstation en op basis daarvan een voorspelling afgeeft.
 
-// voorbeeld nog toe te voegen
-
 ## Achtergrond
 Dit project is onderdeel van een Meet je Stad workshop over data analyse. De workshop geeft een introductie in data analyse o.b.v. de (open) temperatuur data van Meet je Stad. Het doel van de workshop is mensen te laten zien wat er mogelijk is met data analyse. 
 
