@@ -43,6 +43,7 @@ Hier een korte uitleg over de waardes:
 
 Bovenstaande instelling resulteren in het onderstaande:
 
+![Voorbeeld Meet je Stad weeradvies website](/meetjestad-tilburg-weeradvies-voorbeeld.png)
 
 
 ## Uitdagingen
