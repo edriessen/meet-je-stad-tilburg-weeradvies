@@ -54,4 +54,4 @@ Het weer voorspellen is een ingewikkeld iets. Bij de ontwikkeling van dit projec
 Op het moment staan er geen verdere ontwikkelingen gepland. Mocht je interesse hebben in verdere uitleg (over het project of de workshop), neem gerust contact met me op. 
 
 ## Met dank aan
-[Meet je Stad](https://meetjestad.net/) voor de open data, lettertype op de website is [Robot van Google Fonts](https://fonts.google.com/specimen/Roboto). 
+[Meet je Stad](https://meetjestad.net/) voor de open data, lettertype op de website is [Roboto van Google Fonts](https://fonts.google.com/specimen/Roboto). 
