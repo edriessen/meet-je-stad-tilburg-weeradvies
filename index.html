@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">   
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Meet je Stad workshop - Lochal</title>
+        <meta name = "viewport" content = "width = device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet"> 
+        <style>
+            a,abbr,acronym,address,applet,big,blockquote,body,caption,cite,code,dd,del,dfn,div,dl,dt,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,iframe,img,ins,kbd,label,legend,li,object,ol,p,pre,q,s,samp,small,span,strike,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,ul,var{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit}:focus{outline:0}body{line-height:1;color:#000;background:#fff}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}caption,td,th{text-align:left;font-weight:400}blockquote:after,blockquote:before,q:after,q:before{content:""}blockquote,q{quotes:"" ""}.alignleft{float:left}.alignright{float:right}.clear{clear:both}
+            
+            body{
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 1.5em;
+                padding: 30px;
+                color: #F4F3F8;
+            }
+            body.zwart{
+                background: #1E191A;
+            }
+            body.geel{
+                background: #F2B705;
+            }
+            body.blauw{
+                background: #1497FF;
+            }
+            body.roze{
+                background: #EE3457;
+            }
+            h1{
+                font-weight: 700;
+            }
+            h2{
+                font-weight: 100;
+            }
+            h1, h2{
+                font-size: 3.5em;
+                line-height: 1em;
+            }
+            p{
+                margin: 15px 0;
+            }
+        </style>
+        <script src="./data.js"></script>
+        <script>
+            //functions
+            var getJSON = function(url, callback) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', url, true);
+                xhr.responseType = 'json';
+                xhr.onload = function() {
+                  var status = xhr.status;
+                  if (status === 200) {
+                    callback(null, xhr.response);
+                  } else {
+                    callback(status, xhr.response);
+                  }
+                };
+                xhr.send();
+            };
+            
+            var updateHtmlByIdAndText = function(id, text){
+                document.getElementById(id).innerHTML = text;
+            }
+            
+            // waardes die je kan aanpassen         
+            let name = 'Erik';
+            let advice = 'korte broek';
+            let theme = 'blauw'    
+            let tempLimit = 20;
+            let higherTxt = 'Je kan een korte broek aan! Lekker!';
+            let betweenTxt = 'Hmm... je moet zelf even voelen.';
+            let lowerTxt = 'Helaas pindakaas! Het is wat fris.';
+            let sensor = '427';
+            
+            // waardes die nodig zijn voor het ophalen van data
+            let now = new Date();
+            let hour = now.getHours();
+            
+            let day = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));                
+            let hourlyDeltaMin = web_data[day]['hours'][hour]['roll_avg'];
+            let hourlyDeltaMax = web_data[day]['hours'][hour]['roll_max']*1;
+            
+            let roundBy = 10;
+            let hourlyDeltaMaxTxt = Math.round(hourlyDeltaMax*roundBy)/roundBy;
+            let hourlyDeltaMinTxt = Math.round(hourlyDeltaMin*roundBy)/roundBy;
+                            
+        </script>
+    </head>
+    <body id="body">
+        <h2>
+            <span id='name'>?</span>'s <span id="advice">?</span> advies:
+        </h2>
+        <h1>
+          <span id="message"></span>
+        </h1>
+        <p>
+         - 
+        </p>
+        <p>
+            Waarom?
+        </p>
+        <p>
+            Nou, mijn grens voor een <span id="advice2">?</span> is
+            zo'n <span id="limit">?</span>&#176;.
+            Het is nu 
+            <span id="temperature">?</span>&#176;.
+        </p>
+        <p>
+            Gemiddeld loopt de temperatuur in deze periode van het jaar nog zo'n
+            <span id="hourlyDeltaMin">?</span>&#176; tot <span id="hourlyDeltaMax">?</span>&#176; op of af.
+        </p>
+        <p>
+            Daarmee komt de geschatte temperatuur uit op <span id="tempMin">?</span>&#176;  tot <span id="tempMax">?</span>&#176;.
+        </p>
+    <script>
+        // update theme
+        document.body.classList.add(theme);
+        
+        // update copy
+        updateHtmlByIdAndText('name', name);
+        updateHtmlByIdAndText('advice', advice);
+        updateHtmlByIdAndText('advice2', advice);
+        updateHtmlByIdAndText('limit', tempLimit);
+                
+        updateHtmlByIdAndText('hourlyDeltaMin', hourlyDeltaMinTxt);
+        updateHtmlByIdAndText('hourlyDeltaMax', hourlyDeltaMaxTxt);
+
+        //load data
+        getJSON(
+            'https://meetjestad.net/data/?type=sensors&ids='+sensor+'&format=json&limit=1',
+            function(err, data) {
+              if (err !== null) {
+                console.error('Something went wrong: ' + err);
+              } else {
+                console.log(data);
+                let temperature = Math.round(data[0].temperature);
+                updateHtmlByIdAndText('temperature', temperature);
+                  
+                let tempMin = temperature + hourlyDeltaMin;
+                let tempMax = temperature + hourlyDeltaMax;
+                let tempMinTxt = Math.floor(tempMin);
+                let tempMaxTxt = Math.round(tempMax);
+                updateHtmlByIdAndText('tempMin', tempMinTxt);
+                updateHtmlByIdAndText('tempMax', tempMaxTxt);
+                  
+                var message = betweenTxt;
+                if (temperature > tempLimit) {
+                    message = higherTxt;
+                } else if (temperature < tempLimit){
+                    //capture yesterday
+                    if (temperature + hourlyDeltaMin > tempLimit){
+                        message = higherTxt;
+                    }else if (temperature + hourlyDeltaMax > tempLimit){
+                        message = betweenTxt;
+                    } else {
+                        message = lowerTxt;
+                    }
+                }
+                
+                updateHtmlByIdAndText('message', message)
+              }
+            }
+         )    
+    </script>
+    </body>
+</html>
