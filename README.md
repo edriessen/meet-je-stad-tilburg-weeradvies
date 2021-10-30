@@ -32,14 +32,14 @@ let sensor = '427';
 ```
 Hier een korte uitleg over de waardes:
 
-- name: de naam van de persoon die het advies geeft.
-- advice: hetgeen waar je advies over wil geven.
-- theme: de achtergrondkleur van de website. Opties: zwart, blauw, geel of roze.
-- tempLimit: de grenstemperatuur voor je voorspelling.
-- higherTxt: de tekst die je wil zien als de huidige temperatuur hoger ligt dan de grens, of de temperatuur o.b.v. de voorspelling hoog genoeg uit gaat komen.
-- betweenTxt: de tekst die je wil zien als de temperatuur niet zeker hoger over lager dan de grens uit gaat komen.
-- lowerTxt: de tekst die je wil zien als de temperatuur onder de grenswaarde zal blijven.
-- sensor: het identificatienummer (ID) van de sensor die je wil uitlezen.
+- **name**: de naam van de persoon die het advies geeft.
+- **advice**: hetgeen waar je advies over wil geven.
+- **theme**: de achtergrondkleur van de website. Opties: zwart, blauw, geel of roze.
+- **tempLimit**: de grenstemperatuur voor je voorspelling.
+- **higherTxt**: de tekst die je wil zien als de huidige temperatuur hoger ligt dan de grens, of de temperatuur o.b.v. de voorspelling hoog genoeg uit gaat komen.
+- **betweenTxt**: de tekst die je wil zien als de temperatuur niet zeker hoger over lager dan de grens uit gaat komen.
+- **lowerTxt**: de tekst die je wil zien als de temperatuur onder de grenswaarde zal blijven.
+- **sensor**: het identificatienummer (ID) van de sensor die je wil uitlezen.
 
 Bovenstaande instelling resulteren in het onderstaande:
 
