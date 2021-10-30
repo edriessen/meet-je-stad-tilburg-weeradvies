@@ -39,7 +39,7 @@ Hier een korte uitleg over de waardes:
 - **higherTxt**: de tekst die je wil zien als de huidige temperatuur hoger ligt dan de grens, of de temperatuur o.b.v. de voorspelling hoog genoeg uit gaat komen.
 - **betweenTxt**: de tekst die je wil zien als de temperatuur niet zeker hoger over lager dan de grens uit gaat komen.
 - **lowerTxt**: de tekst die je wil zien als de temperatuur onder de grenswaarde zal blijven.
-- **sensor**: het identificatienummer (ID) van de sensor die je wil uitlezen.
+- **sensor**: het identificatienummer (ID) van het Meet je Stad meetstation die je wil uitlezen.
 
 Bovenstaande instelling resulteren in het onderstaande:
 
