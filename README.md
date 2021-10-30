@@ -43,8 +43,9 @@ Hier een korte uitleg over de waardes:
 
 Bovenstaande instelling resulteren in het onderstaande:
 
-<img src="/meetjestad-tilburg-weeradvies-voorbeeld.png" width="200">
-![Voorbeeld Meet je Stad weeradvies website](/meetjestad-tilburg-weeradvies-voorbeeld.png)
+<img alt="Voorbeeld Meet je Stad weeradvies website" src="/meetjestad-tilburg-weeradvies-voorbeeld.png" width="300">
+
+De website vult de informatie uit de instellingen (name, advice, theme, tempLimit en ...Txt) automatisch op de juiste plek in.
 
 
 ## Uitdagingen
