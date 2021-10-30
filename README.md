@@ -13,7 +13,7 @@ Het project maakt gebruik van de open data van Meet je Stad. De data worden op t
 De website is gebouwd met HTML, CSS en Javascript. 
 
 ## Hoe te gebruiken
-Je kan m.b.v. dit repository je eigen weeradvies website maken. Je kan je eigen voorspelling configureren door dit gedeelte inde code aan te passen:
+Je kan m.b.v. dit repository je eigen weeradvies website maken. Je kan je eigen voorspelling configureren door het volgende gedeelte in `index.html` aan te passen:
 
 ```javascript
 ...
