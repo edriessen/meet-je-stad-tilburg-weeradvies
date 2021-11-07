@@ -78,7 +78,7 @@
             let hour = now.getHours();
             
             let day = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));                
-            let hourlyDeltaMin = web_data[day]['hours'][hour]['roll_avg'];
+            let hourlyDeltaMin = web_data[day]['hours'][hour]['roll_min'];
             let hourlyDeltaMax = web_data[day]['hours'][hour]['roll_max']*1;
             
             let roundBy = 10;
